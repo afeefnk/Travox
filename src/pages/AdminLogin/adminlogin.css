@@ -1,0 +1,151 @@
+.adminloginscreen {
+    height: 100svh;
+}
+.mains {
+    width: 471px;
+    height: 438px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 50px rgba(105, 105, 105, 0.09); 
+}
+
+.adminlogo {
+    width: 117px;
+    height: 40px;
+}
+
+.loginheading {
+    font-family: 'Switzer Light';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31.68px;
+    align-self: flex-start;
+}
+
+.mains .labels {
+    font-family: 'Switzer Light';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18.48px;
+    display: block;
+    width: 93px;
+    height: 17px;
+    margin: 1px 0;
+}
+
+.mains .email {
+    font-family: 'Switzer Light';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18.48px;
+    color: #ACACAC;
+}
+
+.mains .passwords {
+    color: #ACACAC;
+    font-family: 'Switzer Light';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18.48px;
+}
+
+ .inputs {
+    width: 370px;
+    height: 48px;
+    border: 1px solid #E9E9E9;
+    padding: 0 15px;
+}
+
+.mains .inputs::placeholder {
+    font-family: 'Switzer Light';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18.48px;
+    color: #ACACAC;
+    width: 139px;
+}
+
+.mains .signin  {
+    font-family: 'Switzer Regular';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23.76px;
+    text-align: center;
+    height: 48px;
+}
+
+.mains .forgotpassword {
+    font-family: 'Switzer Light';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18.48px;
+}
+
+.mains .adminlogin {
+    font-family: 'Cabinet Grotesk';
+    font-weight: 00;
+}
+
+@media (min-width: 576px) {
+        .loginheading {
+            margin-left: 50px;
+        }
+}
+
+
+@media (max-width: 576px) {
+    .mains {
+        width: 396px;
+        height: 393px;
+        position: sticky;
+        margin-bottom: 40px;
+    }
+
+    .loginheading {
+        align-self: center;
+    }
+
+    .inputs {
+        width: 356px;
+    } 
+}
+
+@media (max-width: 420px) {
+    .mains {
+        width: 370px;
+        height: 393px;
+    }
+    .inputs {
+        width: 300px;
+        height: 48px;
+    }
+}
+
+@media (max-width: 400px) {
+    .mains {
+        width: 345px;
+        height: 393px;
+    }
+    .inputs {
+        width: 310px;
+        height: 48px;
+    }
+    .loginheading {
+        font-family: 'Switzer Regular';
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26.4px;
+    }
+}
+@media (max-width: 360px) {
+    .mains {
+        width: 320px;
+        height: 393px;
+    }
+    .inputs {
+        width: 270px;
+        height: 48px;
+    }
+}
