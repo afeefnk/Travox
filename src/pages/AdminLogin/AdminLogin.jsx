@@ -34,10 +34,10 @@ const AdminLogin = () => {
         <h2 className="mb-7 lg:ml-12 text-[#25282B] loginheading">Admin Login</h2>
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div className="relative">
-            <label className="text-[#25282B] labels">User Name</label>
+            <label className="text-[#25282B] labels">Email</label>
             <input
               type="text"
-              placeholder="User Name"
+              placeholder="Email"
               className="rounded-lg mt-1 email outline-none inputs"
             />
           </div>
