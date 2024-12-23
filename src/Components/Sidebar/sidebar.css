@@ -1,0 +1,10 @@
+.mainsidebar {
+  width: 256px;
+}
+
+.mainsidebar .logo {
+  width: 117px;
+  height: 40px;
+  position: relative;
+  top: 40px;
+}

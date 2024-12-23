@@ -1,5 +1,7 @@
 .adminloginscreen {
     height: 100svh;
+    background-image: url('../../assets/images/bgimg.svg');
+    background-position: center;
 }
 .mains {
     width: 471px;
@@ -96,6 +98,9 @@
 
 
 @media (max-width: 576px) {
+    .adminloginscreen {
+        background-size: 533px 572px;
+}
     .mains {
         width: 396px;
         height: 393px;
@@ -113,6 +118,9 @@
 }
 
 @media (max-width: 420px) {
+    .adminloginscreen {
+        background-size: 513px 552px;
+}
     .mains {
         width: 370px;
         height: 393px;
@@ -130,6 +138,9 @@
 }
 
 @media (max-width: 400px) {
+    .adminloginscreen {
+            background-size: 493px 532px;
+    }
     .mains {
         width: 345px;
         height: 393px;

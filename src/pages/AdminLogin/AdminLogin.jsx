@@ -103,7 +103,7 @@ const AdminLogin = () => {
   }, [navigate]);
 
   return (
-    <div className="flex flex-col h-screen items-center bg-custom-pattern bg-center justify-center adminloginscreen">
+    <div className="flex flex-col h-screen items-center  justify-center adminloginscreen">
       <Toaster position="top-center" />
       {/* Logo Section */}
       <div className="mb-9">
