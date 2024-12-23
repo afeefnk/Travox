@@ -118,8 +118,14 @@
         height: 393px;
     }
     .inputs {
-        width: 300px;
+        width: 315px;
         height: 48px;
+    }
+    .loginheading {
+        font-family: 'Switzer Light';
+        font-weight: 600;
+        font-size: 21px;
+        line-height: 26.4px;
     }
 }
 
@@ -133,8 +139,8 @@
         height: 48px;
     }
     .loginheading {
-        font-family: 'Switzer Regular';
-        font-weight: 500;
+        font-family: 'Switzer Light';
+        font-weight: 600;
         font-size: 20px;
         line-height: 26.4px;
     }
