@@ -1,0 +1,86 @@
+.navbar {
+  position: sticky;
+  height: 90px;
+  z-index: 50;
+  padding: 20px 30px 0px 30px;
+  background-color: #fbfbfb;
+}
+
+.span1 {
+  font-family: "Switzer Regular";
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36.96px;
+}
+
+.span2 {
+  font-family: "Switzer Regular";
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36.96px;
+  color: #25282b;
+}
+
+.span3 {
+  font-family: "Switzer Light";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18.48px;
+}
+
+.search {
+  width: 464px;
+  height: 46px;
+  padding: 0px 20px;
+  border-radius: 50px;
+  background-color: #fbfbfb;
+}
+
+.search::placeholder {
+  font-family: "Switzer Light";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18.48px;
+  color: #acacac;
+}
+
+.listserachicon {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(0%) saturate(0%)
+    hue-rotate(0deg) brightness(90%) contrast(95%);
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid #e9e9e9;
+  cursor: pointer;
+}
+
+.bellimg {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) saturate(100%) invert(75%) sepia(0%) saturate(0%)
+    hue-rotate(0deg) brightness(90%) contrast(95%);
+}
+
+.bellimg:hover {
+  filter: brightness(0) saturate(100%) invert(54%) sepia(93%) saturate(500%)
+    hue-rotate(112deg) brightness(90%) contrast(90%);
+}
+
+.settingimg {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) saturate(100%) invert(75%) sepia(0%) saturate(0%)
+    hue-rotate(0deg) brightness(90%) contrast(95%);
+}
+
+.profileicon {
+  width: 46px;
+  height: 46px;
+  cursor: pointer;
+}

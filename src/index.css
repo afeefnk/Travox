@@ -36,3 +36,9 @@
     src: url('../src/assets/fonts/Switzer/Switzer-Regular.otf') format('truetype');
     font-style: normal;
   }
+
+  @font-face {
+    font-family: 'Switzer Bold';
+    src: url('../src/assets/fonts/Switzer/Switzer-Bold.otf') format('truetype');
+    font-style: normal;
+  }

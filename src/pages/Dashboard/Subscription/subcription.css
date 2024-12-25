@@ -1,0 +1,128 @@
+.tablecontainer {
+    margin: 30px 30px 0px 30px;
+    border: 1px solid #eeefff;
+    border-radius: 15px;
+    overflow-x: hidden;
+    width: 68%;
+  }
+  
+  .subscription {
+    font-family: "Switzer Light";
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 31.68px;
+    color: #25282b;
+    padding: 20px 0px 20px 15px;
+  }
+  
+  .expirydays {
+    font-family: "Switzer Regular";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21.12px;
+    padding-bottom: 5px;
+    margin: 0px 15px 0px 15px;
+  }
+  .border-bt {
+    border-bottom-width: 3px;
+  }
+  
+  .companynamehead {
+    text-align: left;
+    font-family: "Switzer Regular";
+    font-weight: 500;
+    font-size: 12px;
+    color: #acacac;
+    padding: 5px 0px 10px 15px;
+  }
+  
+  .expirydatehead {
+    text-align: right;
+    font-family: "Switzer Regular";
+    font-weight: 500;
+    font-size: 12px;
+    color: #acacac;
+    padding: 5px 15px 10px 0px;
+  }
+  
+  .firstcol {
+    display: flex;
+    align-items: center;
+    padding: 16px 15px 16px 15px;
+  }
+  
+  .tablecmpyname {
+    margin-left: 15px;
+    font-family: "Switzer Light";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18.48px;
+  }
+  
+  .secondcol {
+    text-align: right;
+    padding: 16px 15px 16px 15px;
+  }
+  
+  .tabledates {
+    font-family: "Switzer Light";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18.48px;
+    color: #FA461D;
+  }
+  
+
+  
+  .paginationtext {
+    font-family: "Switzer Light";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18.48px;
+    color: #ACACAC;
+  }
+  
+  .swipepage {
+    font-family: "Switzer Regular";
+    font-weight: 500;
+  }
+  
+  .tablecontainer .overflow-x-auto {
+    overflow-x: hidden;
+  }
+  
+  .tablecontainer .table-auto {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tablecontainer .table-auto thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .tablecontainer .table-auto tbody {
+    display: block;
+    max-height: 486px;   
+    overflow-y: auto;
+  }
+  
+  .tablecontainer .table-auto tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  .tablecontainer .table-auto thead tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+.overflow-x-auto {
+  scrollbar-width:thin;
+  scrollbar-color: #dcdcdc #f0f0f0;
+}
+
+  

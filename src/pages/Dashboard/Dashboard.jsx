@@ -1,19 +1,18 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import Cards from "./Cards/Cards";
+import SubscriptionTable from "./Subscription/SubscriptionTable";
+import AccountSummary from "./AccountSummary/AccountSummary";
 
 const Dashboard = () => {
-  const navigate = useNavigate();
-  const handleLogout = () => {
-    localStorage.removeItem("adminAuthToken");
-    navigate("/");
-  };
-
   return (
-    <div className=' bg-gray-200 w-full'>
-     <h1>Dashboard</h1>
-     <button onClick={handleLogout}>Log out</button>
+    <div className="bg-[#FBFBFB]">
+      <Cards />
+      <div className="flex">
+        <SubscriptionTable />
+        <AccountSummary />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;

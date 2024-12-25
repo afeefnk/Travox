@@ -3,8 +3,100 @@
 }
 
 .mainsidebar .logo {
-  width: 117px;
+  width: 116px;
   height: 40px;
-  position: relative;
-  top: 40px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: auto;
 }
+
+.divider {
+  width: 80%;
+  height: 0.5px;
+  background-color: #E9E9E9;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.divider2 {
+  width: 80%;
+  height: 0.5px;
+  background-color: #E9E9E9;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.sidebartab {
+  margin: 30px 0px;
+  gap: 10px 0px;
+}
+
+.sideicon {
+  width: 16.5px;
+  height: 16.5px;
+}
+
+.dashboardimg {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(0%) saturate(0%)
+    hue-rotate(0deg) brightness(90%) contrast(95%);
+}
+
+.spans {
+  font-family: "Switzer Light";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21.12px;
+  color: #acacac;
+}
+
+.menu {
+  margin-right: auto;
+  padding: 10px 0px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-left: 20px;
+  cursor: pointer;
+  
+}
+
+.activestate:hover .sideicon {
+  filter: brightness(0) saturate(100%) invert(15%) sepia(88%) saturate(2373%) hue-rotate(217deg) brightness(94%) contrast(98%);
+}
+
+.activestate.active .sideicon {
+  filter: brightness(0) saturate(100%) invert(15%) sepia(88%) saturate(2373%) hue-rotate(217deg) brightness(94%) contrast(98%);
+
+}
+
+.activestate:hover .spans {
+  color: #254396;
+}
+
+.activestate.active .spans {
+  color: #254396;
+  font-family: "Switzer Light";
+  font-weight: 600;
+}
+
+.activestate.active {
+  background-color: #EFF6FE;
+  border-radius: 0px 8px 8px 0px;
+  padding: 10px 0px;
+  width: 200px;
+  transition: background-color 0.3s ease, border-radius 0.3s ease, padding 0.3s ease, width 0.3s ease;
+}
+
+.footertext {
+  font-family: "Switzer Light";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15.84px;
+  color: #959595;
+  margin-left: 20px;
+  margin-top: 45px;
+}
+
