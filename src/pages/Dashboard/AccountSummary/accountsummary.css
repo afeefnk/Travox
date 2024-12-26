@@ -3,7 +3,8 @@
     border-radius: 15px;
     background-color: #FBFBFB;
     margin: 30px 30px 0px 0px;
-    height: 679.2px;
+    height: 639.2px;
+    overflow: auto;
     width: 44%;
 }
 
@@ -51,13 +52,6 @@
   }
 
 
-  /* In your accountsummary.css */
 
-/* Targeting text elements inside the donut chart */
-.apexcharts-text.apexcharts-datalabel-label {
-    font-size: 16px !important;
-    font-weight: bold !important;
-    color: #333 !important;
-  }
 
   

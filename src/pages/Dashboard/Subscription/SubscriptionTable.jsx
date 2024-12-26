@@ -143,8 +143,7 @@ const SubscriptionTable = () => {
   };
 
   return (
-
-    <>
+    <div className=" subscriptionmain">
       <div className="tablecontainer">
         <h2 className="subscription">Subscription</h2>
 
@@ -158,7 +157,7 @@ const SubscriptionTable = () => {
                 className={`expirydays ${
                   activeTab === tab
                     ? "text-[#254396] border-bt border-t-2 border-b-[#254396] border-t-transparent"
-                    : "text-[#ACACAC]"
+                    : "text-[#ACACAC] hover:text-[#7b7b7b]" 
                 }`}
               >
                 {tab}
@@ -191,13 +190,15 @@ const SubscriptionTable = () => {
                     <span className="tabledates">
                       {item.startDate} - {item.endDate}
                     </span>
-                  </td>
+                  </td> 
                 </tr>
               ))}
             </tbody>
           </table>
-          <div className="pagination">
-        <div className="flex justify-between items-center">
+        </div>
+
+      </div>
+        <div className="flex justify-between items-center pagination">
           <p className="paginationtext">
             Showing{" "}
             <span className="text-[#25282B]">
@@ -245,13 +246,7 @@ const SubscriptionTable = () => {
             </button>
           </div>
         </div>
-      </div>
-        </div>
-       
-      </div>
-
-     
-      </>
+    </div>
   );
 };
 

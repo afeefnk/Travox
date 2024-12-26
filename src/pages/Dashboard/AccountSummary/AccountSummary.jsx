@@ -30,7 +30,7 @@ const AccountSummary = () => {
         colors: '#25282B', // Color for the legend items text
       },
       itemMargin: {
-        horizontal: 10,  
+        horizontal: 25,  
         vertical: 15,
       }, 
     },

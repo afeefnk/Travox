@@ -1,9 +1,13 @@
+.subscriptionmain {
+  width: 73.5%;
+}
+
 .tablecontainer {
     margin: 30px 30px 0px 30px;
     border: 1px solid #eeefff;
     border-radius: 15px;
     overflow-x: hidden;
-    width: 68%;
+    /* width: 68%; */
   }
   
   .subscription {
@@ -80,6 +84,11 @@
     font-size: 14px;
     line-height: 18.48px;
     color: #ACACAC;
+    
+  }
+
+  .pagination {
+    padding: 0px 30px;
   }
   
   .swipepage {

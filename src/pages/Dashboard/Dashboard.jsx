@@ -2,6 +2,7 @@ import React from "react";
 import Cards from "./Cards/Cards";
 import SubscriptionTable from "./Subscription/SubscriptionTable";
 import AccountSummary from "./AccountSummary/AccountSummary";
+import TotalSales from "./TotalSales/TotalSales";
 
 const Dashboard = () => {
   return (
@@ -11,6 +12,7 @@ const Dashboard = () => {
         <SubscriptionTable />
         <AccountSummary />
       </div>
+      <TotalSales/>
     </div>
   );
 };
