@@ -10,7 +10,7 @@ const Layout = () => {
       <div className="flex-1 flex flex-col">
         <Navbar />
         {/* Add overflow-auto or overflow-y-auto to make content scrollable */}
-        <div className="flex-1 overflow-y-auto">
+        <div className="flex-1 overflow-y-auto bg-[#FBFBFB]">
           <Outlet />
         </div>
       </div>

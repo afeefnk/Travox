@@ -1,0 +1,128 @@
+.adminmanage {
+    border: 1px solid transparent;
+    border-radius: 15px;
+    margin: 30px;
+    background-color: white;
+}
+
+.adminhead {
+    padding: 20px;
+    font-family: "Switzer Light";
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 25px;
+    color: #25282B;
+}
+
+.addmanagebuttons {
+    display: flex;
+    border-bottom: 1px solid #EEEFFF;
+    margin: 35px 0px 0px 0px;
+}
+
+.adminbtns {
+    width: 16rem;
+    justify-content: center;
+    align-items: center;
+    font-family: "Switzer Regular";
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 10px;
+}
+
+.addadminform {
+    width: 75%;
+    gap: 1.5rem;
+    display: grid;
+    padding: 0px 20px 20px 20px;
+    margin-top: 35px;
+}
+
+.manageadminform {
+    width: 75%;
+}
+
+
+.addadminlabels {
+    display: block;
+    font-family: "Switzer Regular";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #25282B;
+    margin-bottom: 5px;
+}
+
+.inputbox {
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+    border: 1px solid #EEEFFF;
+    border-radius: 6px;
+    outline: none;
+}
+
+.inputbox::placeholder {
+    font-family: "Switzer Light";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #ACACAC;
+}
+
+.submitbtn {
+    width: 100%;
+    padding: 8px 16px;
+    font-family: "Switzer Regular"; 
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23.76px;
+}
+
+
+
+.toggle {
+    width: 30px;
+    /* height: 15px; */
+  }
+  
+  .bar {
+    width: 11px;
+    height: 11px;
+  }
+  
+  .translate-x-2 {
+    transform: translateX(0.8rem);
+  }
+  
+  .translate-x-0 {
+    transform: translateX(-0.1rem);
+  }
+
+  .manageadminhead {
+    background-color: #F6F6F6;
+    height: 42px;
+  }
+
+  .admintablehaed {
+    font-family: "Switzer Light";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #ACACAC;
+  }
+
+  .adminnamecol {
+    font-family: "Switzer Regular";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    width: 35%;
+  }
+
+  .admindeletebtn {
+    padding-right: 35%;
+  }
+
+
+

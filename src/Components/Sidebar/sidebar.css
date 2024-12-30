@@ -1,21 +1,35 @@
 .mainsidebar {
   width: 256px;
+  height: 100vh; /* Ensure the sidebar fills the height */
+  overflow-y: auto; /* Enable scrolling */
+  position: relative; /* To position the logo and divider correctly */
 }
 
-.mainsidebar .logo {
+.sidebar-content {
+  margin-top: 100px; /* Add space for the fixed logo and divider */
+  padding-bottom: 20px; /* Ensure the content doesn't touch the bottom */
+  height: 100%; /* Full height for the scrollable area */
+}
+
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
   width: 116px;
   height: 40px;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: auto;
+  margin-top: 0; /* Remove any margin */
+  z-index: 10;
 }
 
 .divider {
-  width: 80%;
+  position: fixed;
+  top: 70px; /* Space for logo */
+  left: 20px;
+  width: 200px;
+  margin-top: 25px;
   height: 0.5px;
   background-color: #E9E9E9;
-  margin-top: 30px;
-  margin-left: 20px;
+  z-index: 10; /* Make sure the divider stays on top */
 }
 
 .divider2 {
@@ -23,11 +37,12 @@
   height: 0.5px;
   background-color: #E9E9E9;
   margin-top: 10px;
+  margin-bottom: 30px;
   margin-left: 20px;
 }
 
 .sidebartab {
-  margin: 30px 0px;
+  margin: 25px 0px 0px 0px;
   gap: 10px 0px;
 }
 
@@ -37,8 +52,7 @@
 }
 
 .dashboardimg {
-  filter: brightness(0) saturate(100%) invert(75%) sepia(0%) saturate(0%)
-    hue-rotate(0deg) brightness(90%) contrast(95%);
+  filter: brightness(0) saturate(100%) invert(75%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(95%);
 }
 
 .spans {
@@ -52,6 +66,7 @@
 .menu {
   margin-right: auto;
   padding: 10px 0px;
+  transition: all 0.3s ease;
 }
 
 .item {
@@ -60,7 +75,7 @@
   gap: 13px;
   margin-left: 20px;
   cursor: pointer;
-  
+  transition: background-color 0.3s ease;
 }
 
 .activestate:hover .sideicon {
@@ -69,7 +84,6 @@
 
 .activestate.active .sideicon {
   filter: brightness(0) saturate(100%) invert(15%) sepia(88%) saturate(2373%) hue-rotate(217deg) brightness(94%) contrast(98%);
-
 }
 
 .activestate:hover .spans {
@@ -86,8 +100,46 @@
   background-color: #EFF6FE;
   border-radius: 0px 8px 8px 0px;
   padding: 10px 0px;
-  width: 200px;
-  transition: background-color 0.3s ease, border-radius 0.3s ease, padding 0.3s ease, width 0.3s ease;
+  width: 210px;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: none; /* Hidden by default */
+  padding-top: 5px;
+  border-radius: 4px;
+  transition: max-height 0.3s ease;
+  max-height: 0;
+  margin-top: -10px;
+  overflow: hidden;
+}
+
+.dropdown-menu.open {
+  display: block;
+  max-height: 200px; /* Adjust as needed */
+  transition: max-height 0.5s ease-out;
+  margin-right: auto;
+  margin-left: 3rem;
+}
+
+.dropdown-item {
+  padding: 8px 0;
+  cursor: pointer;
+  color: #555;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  color: #007bff;
+}
+
+.dropdown-icon {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-icon.rotate {
+  transform: rotate(180deg);
 }
 
 .footertext {
@@ -97,6 +149,6 @@
   line-height: 15.84px;
   color: #959595;
   margin-left: 20px;
-  margin-top: 45px;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
-

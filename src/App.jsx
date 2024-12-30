@@ -5,6 +5,8 @@ import AdminLogin from "./pages/AdminLogin/AdminLogin";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Layout from "./pages/Layout";
 import AdminManagement from "./pages/AdminManagement/AdminManagement";
+import AddUser from "./pages/UserManagement/AddUser/AddUser";
+import ManageUser from "./pages/UserManagement/ManageUser/ManageUser";
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
         <Route path="/admin" element={<Layout/>}>
           <Route path="dashboard" element={<Dashboard/>}/>
           <Route path="adminmanage" element={<AdminManagement/>}/>
+          <Route path="adduser" element={<AddUser/>}/>
+          <Route path="manageuser" element={<ManageUser/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
