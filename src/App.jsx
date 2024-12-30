@@ -7,6 +7,7 @@ import Layout from "./pages/Layout";
 import AdminManagement from "./pages/AdminManagement/AdminManagement";
 import AddUser from "./pages/UserManagement/AddUser/AddUser";
 import ManageUser from "./pages/UserManagement/ManageUser/ManageUser";
+import StaffManagement from "./pages/StaffManagement/StaffManagement";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="adminmanage" element={<AdminManagement/>}/>
           <Route path="adduser" element={<AddUser/>}/>
           <Route path="manageuser" element={<ManageUser/>}/>
+          <Route path="staffmanagement" element={<StaffManagement/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

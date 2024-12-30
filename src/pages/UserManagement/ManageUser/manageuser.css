@@ -1,0 +1,46 @@
+.manageusercontainer {
+    margin: 30px;
+    border-radius: 15px;
+    padding-bottom: 20px;
+}
+
+.manageuserhead {
+    font-family: "Switzer Light";
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 25px;
+    color: #25282B;
+    padding: 20px;
+}
+
+.userslists {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.listhead {
+    font-family: "Switzer Light";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #ACACAC;
+}
+
+.listdata{
+    font-family: "Switzer Regular";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #25282B;
+}
+
+.userstatus{
+   padding: 2px 6px;
+   border-radius: 4px;
+   font-family: "Switzer Light";
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 16px;
+}

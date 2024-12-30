@@ -58,7 +58,7 @@ const AddUser = () => {
               </label>
               <div className="relative">
                 <select
-                  className="inputboxes options custom-select"
+                  className="inputboxes options custom-select cursor-pointer"
                   onBlur={() => setIsOpen(false)} // Close dropdown when focus is lost
                 >
                   <option>Choose</option>

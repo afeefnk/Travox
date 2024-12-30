@@ -30,7 +30,13 @@ const Sidebar = () => {
   }, [location]);
 
   const handleItemClick = (item, path) => {
-    setActiveItem(item);
+    if (item === "usermanage" || item === "adduser" || item === "manageuser") {
+      setActiveItem("usermanage"); // Set active state for the parent menu
+      setIsAdminMenuOpen(true);
+    } else {
+      setIsAdminMenuOpen(false);
+      setActiveItem(item); // Set active state for non-dropdown items
+    }
     localStorage.setItem("activeItem", item);
     navigate(path);
   };
@@ -71,7 +77,9 @@ const Sidebar = () => {
 
             {/* Admin management */}
             <div
-              onClick={() => handleItemClick("adminmanage", "/admin/adminmanage")}
+              onClick={() =>
+                handleItemClick("adminmanage", "/admin/adminmanage")
+              }
               className={`menu activestate ${
                 activeItem === "adminmanage" ? "active" : ""
               }`}
@@ -88,13 +96,15 @@ const Sidebar = () => {
 
             {/* User Management */}
             <div
-            className={`menu activestate ${
-              activeItem === "usermanage" ? "active" : ""
-            }`}>
-            <div
-              onClick={toggleAdminMenu}
-              className="flex item"
+              onClick={() => {
+                setActiveItem("usermanage");
+                toggleAdminMenu();
+              }}
+              className={`menu activestate ${
+                activeItem === "usermanage" ? "active" : ""
+              }`}
             >
+              <div className="flex item">
                 <img
                   src={user_management}
                   alt="Admin icon"
@@ -102,23 +112,30 @@ const Sidebar = () => {
                 />
                 <span className="spans">User Management</span>
                 <img
-                  src={dropdown_icon} // Replace with your dropdown icon
+                  src={dropdown_icon}
                   alt="Dropdown icon"
-                  className={`dropdown-icon ${isAdminMenuOpen ? "rotate" : ""}`} // Rotate icon on open
+                  className={`dropdown-icon ${isAdminMenuOpen ? "rotate" : ""}`}
                 />
               </div>
             </div>
 
             {/* Dropdown menu items */}
-            <div className={`dropdown-menu ${isAdminMenuOpen ? "open" : ""}`}>
+            <div
+              className={`dropdown-menu ${isAdminMenuOpen ? "open" : ""}`}
+              style={{ marginLeft: "2.5rem" }}
+            >
               <div
-                className="dropdown-item"
+                className={`dropdown-item ${
+                  activeItem === "adduser" ? "active" : ""
+                }`}
                 onClick={() => handleItemClick("adduser", "/admin/adduser")}
               >
                 Add User
               </div>
               <div
-                className="dropdown-item"
+                className={`dropdown-item ${
+                  activeItem === "manageuser" ? "active" : ""
+                }`}
                 onClick={() =>
                   handleItemClick("manageuser", "/admin/manageuser")
                 }
@@ -127,14 +144,13 @@ const Sidebar = () => {
               </div>
             </div>
 
-
             {/* Staff management */}
             <div
               onClick={() =>
-                handleItemClick("staffmanage", "/admin/staffmanage")
+                handleItemClick("staffmanagement", "/admin/staffmanagement")
               }
               className={`menu activestate ${
-                activeItem === "staffmanage" ? "active" : ""
+                activeItem === "staffmanagement" ? "active" : ""
               }`}
             >
               <div className="item">
