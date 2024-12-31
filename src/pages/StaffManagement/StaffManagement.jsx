@@ -16,7 +16,7 @@ const StaffManagement = () => {
 
       <h1 className="staffmanagehead">
         {activeTab === "addStaff" && "Add Staff"}
-        {activeTab === "manageAdmin" && "Manage Admin"}
+        {activeTab === "manageStaff" && "Manage Staff"}
         {activeTab === "staffRoles" && "Staff Roles"}
       </h1>
 
@@ -32,12 +32,12 @@ const StaffManagement = () => {
           </div>
         </button>
         <button
-          onClick={() => setActiveTab("manageAdmin")}
-          className={`stafftabs ${activeTab === "manageAdmin" ? "active" : ""}`}
+          onClick={() => setActiveTab("manageStaff")}
+          className={`stafftabs ${activeTab === "manageStaff" ? "active" : ""}`}
         >
           <div className="flex gap-2">
-            {activeTab === "manageAdmin" && <img src={stafficon} alt="" />}
-            Manage Admin
+            {activeTab === "manageStaff" && <img src={stafficon} alt="" />}
+            Manage Staff
           </div>
         </button>
         <button
