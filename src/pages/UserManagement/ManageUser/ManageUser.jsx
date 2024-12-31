@@ -38,7 +38,7 @@ const ManageUser = () => {
               key={user.id}
               className="border-b border-gray-100 lg:p-5"
             >
-              <div className="grid grid-cols-4 gap-9">
+              <div className="grid grid-cols-4 gap-7">
                 <div>
                   <p className="listhead">ID</p>
                   <p className="listdata">{user.id}</p>

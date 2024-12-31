@@ -30,15 +30,19 @@ const Sidebar = () => {
   }, [location]);
 
   const handleItemClick = (item, path) => {
-    if (item === "usermanage" || item === "adduser" || item === "manageuser") {
-      setActiveItem("usermanage"); // Set active state for the parent menu
-      setIsAdminMenuOpen(true);
+    if (item === "usermanage") {
+      setIsAdminMenuOpen((prev) => !prev); // Toggle dropdown menu
+      setActiveItem("usermanage"); // Keep parent active
+    } else if (item === "adduser" || item === "manageuser") {
+      setActiveItem(item); // Set active state for the specific submenu
+      setIsAdminMenuOpen(true); // Ensure the parent dropdown stays open
+      localStorage.setItem("activeItem", "usermanage"); // Keep parent active in storage
     } else {
       setIsAdminMenuOpen(false);
       setActiveItem(item); // Set active state for non-dropdown items
     }
-    localStorage.setItem("activeItem", item);
-    navigate(path);
+    localStorage.setItem("activeItem", item); // Save the clicked item in local storage
+    navigate(path); // Navigate to the specified path
   };
 
   const handleLogout = () => {
@@ -96,18 +100,17 @@ const Sidebar = () => {
 
             {/* User Management */}
             <div
-              onClick={() => {
-                setActiveItem("usermanage");
-                toggleAdminMenu();
-              }}
+              onClick={() => handleItemClick("adduser", "/admin/adduser")}
               className={`menu activestate ${
-                activeItem === "usermanage" ? "active" : ""
+                activeItem === "adduser" || activeItem === "manageuser"
+                  ? "active"
+                  : ""
               }`}
             >
               <div className="flex item">
                 <img
                   src={user_management}
-                  alt="Admin icon"
+                  alt="User Management icon"
                   className="sideicon"
                 />
                 <span className="spans">User Management</span>
@@ -166,10 +169,10 @@ const Sidebar = () => {
             {/* Other menu items */}
             <div
               onClick={() =>
-                handleItemClick("subscription", "/admin/subscription")
+                handleItemClick("subscriptions", "/admin/subscriptions")
               }
               className={`menu activestate ${
-                activeItem === "subscription" ? "active" : ""
+                activeItem === "subscriptions" ? "active" : ""
               }`}
             >
               <div className="item">

@@ -8,6 +8,7 @@ import AdminManagement from "./pages/AdminManagement/AdminManagement";
 import AddUser from "./pages/UserManagement/AddUser/AddUser";
 import ManageUser from "./pages/UserManagement/ManageUser/ManageUser";
 import StaffManagement from "./pages/StaffManagement/StaffManagement";
+import Subscriptions from "./pages/Subscriptions/Subscriptions";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="adduser" element={<AddUser/>}/>
           <Route path="manageuser" element={<ManageUser/>}/>
           <Route path="staffmanagement" element={<StaffManagement/>}/>
+          <Route path="subscriptions" element={<Subscriptions/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,0 +1,115 @@
+.staffmanage {
+  margin: 30px;
+  border-radius: 15px;
+}
+
+.staffmanagehead {
+  font-family: "Switzer Light";
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 25px;
+  color: #25282b;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.stafftabs {
+  padding: 0.2rem 0rem;
+  font-family: "Switzer Light";
+  font-size: 14px;
+  font-weight: 400;
+  border-bottom: 2px solid transparent;
+  color: #acacac;
+  cursor: pointer;
+  width: 25%;
+  justify-items: center;
+}
+
+.stafftabs.active {
+  color: #254396;
+  font-weight: 600;
+  border-bottom: 2px solid #254396;
+}
+
+.flex .gap-2 {
+  gap: 0.5rem; /* Space between icon and text */
+}
+
+.addstaffform {
+  gap: 1.5rem;
+  padding: 0px 20px;
+  margin-top: 35px;
+  width: 85%;
+}
+
+.addstafflabel {
+  font-family: "Switzer Regular";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #25282b;
+}
+
+.addstaffinput {
+  height: 44px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  margin-top: 5px;
+  outline: none;
+  height: 44px;
+}
+
+.addstaffinput::placeholder,
+select {
+  font-family: "Switzer Light";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #acacac;
+}
+
+/* Wrapper for the select element */
+.select-wrappers {
+  position: relative;
+  display: inline-block;
+  width: 100%; /* Adjust based on your layout */
+}
+
+/* Custom select dropdown */
+.custom-selects {
+  appearance: none; /* Hide default arrow */
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+  background: none;
+  border: 1px solid #eeefff; /* Add your preferred border styles */
+  padding: 8px 12px; /* Space for text and icon */
+  font-size: 14px;
+  width: 100%;
+  border-radius: 6px;
+  position: relative;
+}
+
+/* Custom dropdown icon */
+.select-wrappers::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 65%;
+  width: 15px; /* Icon width */
+  height: 15px; /* Icon height */
+  background-image: url("../../assets/images/StaffManagement/selecticon.svg"); /* Replace with your icon path */
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease; /* Smooth rotation transition */
+}
+
+/* Rotate the icon when dropdown is active */
+.select-wrappers.open::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.addstaffbtn {
+    font-family: "Switzer Regular";
+    font-weight: 500;
+    height: 48px;
+    width: 49%;
+}

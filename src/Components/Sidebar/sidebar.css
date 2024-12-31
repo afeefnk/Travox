@@ -151,6 +151,12 @@
   color: #007bff;
 }
 
+/* Active state for dropdown items */
+.dropdown-item.active {
+  color: #254396; /* Match the active color */
+  font-weight: 600;
+}
+
 .dropdown-icon {
   transition: transform 0.3s ease;
 }

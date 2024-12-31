@@ -41,7 +41,7 @@
 .inputboxes {
   margin-top: 4px;
   width: 100%;
-  border: 1px solid #eeefff;
+  border: 1px solid #EEEFFF;
   border-radius: 6px;
   padding: 0px 0px 0px 15px;
   height: 44px;
@@ -62,7 +62,7 @@
 }
 
 .bankdetails {
-  width: 50%;
+  width: 49%;
   display: flex;
 }
 
