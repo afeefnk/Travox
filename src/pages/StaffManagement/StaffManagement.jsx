@@ -26,7 +26,7 @@ const StaffManagement = () => {
           onClick={() => setActiveTab("addStaff")}
           className={`stafftabs ${activeTab === "addStaff" ? "active" : ""}`}
         >
-          <div className="flex gap-2">
+          <div className="flex gap-2 justify-center">
             {activeTab === "addStaff" && <img src={stafficon} alt="" />}
             Add a Staff
           </div>
@@ -35,7 +35,7 @@ const StaffManagement = () => {
           onClick={() => setActiveTab("manageStaff")}
           className={`stafftabs ${activeTab === "manageStaff" ? "active" : ""}`}
         >
-          <div className="flex gap-2">
+          <div className="flex gap-2 justify-center">
             {activeTab === "manageStaff" && <img src={stafficon} alt="" />}
             Manage Staff
           </div>
@@ -44,7 +44,7 @@ const StaffManagement = () => {
           onClick={() => setActiveTab("staffRoles")}
           className={`stafftabs ${activeTab === "staffRoles" ? "active" : ""}`}
         >
-          <div className="flex gap-2">
+          <div className="flex gap-2 justify-center">
             {activeTab === "staffRoles" && <img src={stafficon} alt="" />}
             Staff Roles
           </div>
@@ -122,9 +122,9 @@ const StaffManagement = () => {
           </form>
         </div>
       )}
-      {activeTab === "manageAdmin" && (
+      {activeTab === "manageStaff" && (
         <div>
-          <p>Content for managing admins goes here.</p>
+          <p>Content for managing staffs goes here.</p>
         </div>
       )}
       {activeTab === "staffRoles" && (

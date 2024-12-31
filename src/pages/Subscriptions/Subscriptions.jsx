@@ -28,7 +28,7 @@ const Subscriptions = () => {
           onClick={() => setActiveTab("addSubscriptionplan")}
           className={`subscriptiontabs ${activeTab === "addSubscriptionplan" ? "active" : ""}`}
         >
-          <div className="flex gap-2">
+          <div className="flex gap-2 justify-center">
             {activeTab === "addSubscriptionplan" && <img src={stafficon} alt="" />}
             Add a Subscription Plan
           </div>
@@ -37,7 +37,7 @@ const Subscriptions = () => {
           onClick={() => setActiveTab("manageSubsciptions")}
           className={`subscriptiontabs ${activeTab === "manageSubsciptions" ? "active" : ""}`}
         >
-          <div className="flex gap-2">
+          <div className="flex gap-2 justify-center">
             {activeTab === "manageSubsciptions" && <img src={stafficon} alt="" />}
             Manage Subscriptions
           </div>
