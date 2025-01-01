@@ -24,7 +24,7 @@ const AddUser = () => {
       <form className="adduserform">
         <h2 className="adduserhead">Add User</h2>
 
-        <div className="dividerbottom"></div>
+        <div className="dividerbottoms"></div>
         <div className="form">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-8">
             <div>

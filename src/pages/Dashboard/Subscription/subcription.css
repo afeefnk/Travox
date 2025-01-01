@@ -131,7 +131,7 @@
 
 @media (min-width:1584px) {
   .subscriptionmain {
-    width: 73.1%;
+    width: 73%;
   }
 }
 
@@ -218,3 +218,57 @@
       width: 70.1%;
     }
   }
+
+  @media (min-width:2399px) {
+    .subscriptionmain {
+      width: 70%;
+    }
+  }
+
+  @media (min-width:2450px) {
+    .subscriptionmain {
+      width: 69.99%;
+    }
+  }
+
+  @media (min-width:2499px) {
+    .subscriptionmain {
+      width: 69.89%;
+    }
+  }
+
+  @media (min-width:2549px) { 
+    .subscriptionmain {
+      width: 69.8%;
+    }
+  }
+
+  @media (min-width:2600px) { 
+    .subscriptionmain {
+      width: 69.6%;
+    }
+  }
+
+  @media (min-width:2700px) { 
+    .subscriptionmain {
+      width: 69.4%;
+    }
+  }
+
+  @media (min-width:2850px) {
+    .subscriptionmain {
+      width: 69.3%;
+    }
+   }
+
+   @media (min-width:2950px) { 
+    .subscriptionmain {
+      width: 69.2%;
+    }
+   }
+
+   @media (min-width:3000px) { 
+    .subscriptionmain {
+      width: 69.1%;
+    }
+   }
