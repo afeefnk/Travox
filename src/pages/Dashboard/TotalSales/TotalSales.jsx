@@ -17,8 +17,8 @@ const getSalesDataForRange = (range) => {
       ];
     case "30 Days":
       return [
-        [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 16000, 17000, 18000, 19000, 20000, 21000, 22000, 23000, 24000, 25000, 26000, 27000, 2800, 2900, 3000], // Company A
-        [1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000, 10500, 11000, 11500, 12000, 12500, 13000, 13500, 14540, 1700, 2400, 3200], // Company B
+        [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 16000], // Company A
+        [1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500], // Company B
       ];
     case "15 Days":
       return [
@@ -89,20 +89,18 @@ const groupDataFor7Days = (data) => {
 // Generate dynamic labels for x-axis based on selected range
 const getXAxisCategories = (range) => {
   if (range === "30 Days") {
+    // Create labels for every 5th day (Day 5, Day 10, Day 15, ...)
     const dayRanges = [];
-    for (let i = 1; i <= 30; i += 3) {
-      const start = i;
-      const end = i + 2 > 30 ? 30 : i + 2; // Handle the case where the last group may have less than 3 days
-      dayRanges.push(`Day ${start}-${end}`);
+    for (let i = 5; i <= 30; i += 5) {
+      dayRanges.push(`Day ${i}`);
     }
     return dayRanges;
   } else if (range === "15 Days") {
     const dayRanges = [];
-    for (let i = 1; i <= 15; i += 2) {
-      const start = i;
-      const end = i + 1 > 15 ? 15 : i + 1; // Handle the case where the last group may have less than 2 days
-      dayRanges.push(`Day ${start}-${end}`);
+    for (let i = 2; i <= 14; i += 2) {
+      dayRanges.push(`Day ${i}`);
     }
+    dayRanges.push("Day 15");  // Manually add Day 15 at the end
     return dayRanges;
   } else if (range === "7 Days") {
     const dayRanges = [];
@@ -117,6 +115,8 @@ const getXAxisCategories = (range) => {
     ];
   }
 };
+
+
 
 const TotalSales = ({ companies = ["Company A", "Company B"], ranges = ["1 Year", "6 Months", "30 Days", "15 Days", "7 Days"] }) => {
   const [selectedRange, setSelectedRange] = useState("1 Year");
