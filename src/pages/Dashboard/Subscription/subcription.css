@@ -129,6 +129,15 @@
 }
 
 
+.tablecontainer .table-auto tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* Light gray for odd rows */
+}
+
+.tablecontainer .table-auto tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* White for even rows */
+}
+
+
 @media (min-width:1584px) {
   .subscriptionmain {
     width: 73%;

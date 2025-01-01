@@ -178,7 +178,7 @@ const SubscriptionTable = () => {
             </thead>
             <tbody>
               {paginatedCompanies.map((item) => (
-                <tr key={item.id} className="border-b last:border-none">
+                <tr key={item.id} className="border-b last:border-none cursor-pointer">
                   <td className="firstcol">
                     <div
                       className={`w-8 h-8 flex items-center justify-center rounded-full bg-[#CBF9FF] font-medium text-blue-500`}

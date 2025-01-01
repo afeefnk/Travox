@@ -16,11 +16,11 @@ ChartJS.register(ArcElement, Tooltip, Legend, Title, ChartDataLabels); // Regist
 
 const AccountSummary = () => {
   const data = {
-    labels: ["Service", "Transport", "Health", "Food", "Shop"],
+    labels: ["Service", "Transport", "Health", "Food", "Shop", "Savings"],
     datasets: [
       {
-        data: [35, 12, 11, 17, 25],
-        backgroundColor: ["#45B020", "#1192EF", "#9614FC", "#D22CD6", "#F5640D"],
+        data: [25, 12, 11, 17, 15, 20],
+        backgroundColor: ["#45B020", "#1192EF", "#9614FC", "#D22CD6", "#F5640D", "#FFFF00"],
         hoverOffset: 30,
       },
     ],
@@ -49,15 +49,14 @@ const AccountSummary = () => {
       },
       legend: {
         position: "bottom", // Move legend to the bottom
+        align: "center",
         labels: {
           usePointStyle: true, // Use point-style indicators
-          padding: 58,
           font: {
             size: 10, // Custom font size for legend
             family: "Switzer Regular, sans-serif", // Custom font family for legend
           },
           color: "#25282B", // Custom font color for legend
-          boxWidth: 15, // Adjust the width of the point-style indicator
           padding: 18,
         },
       },

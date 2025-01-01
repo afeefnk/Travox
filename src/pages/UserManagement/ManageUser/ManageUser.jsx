@@ -20,7 +20,7 @@ const ManageUser = () => {
       email: "info@flynext.com",
       contactPerson: "Ansar Mannath",
       contactNumber: "+91 9995 90 9132",
-      status: "Inactive",
+      status: "Blocked",
       subscriptionEmail: "info@flynext.com",
     },
     {
@@ -38,7 +38,7 @@ const ManageUser = () => {
       email: "info@flynext.com",
       contactPerson: "Ansar Mannath",
       contactNumber: "+91 9995 90 9132",
-      status: "Inactive",
+      status: "Blocked",
       subscriptionEmail: "info@flynext.com",
     },
     {
@@ -56,7 +56,7 @@ const ManageUser = () => {
       email: "info@flynext.com",
       contactPerson: "Ansar Mannath",
       contactNumber: "+91 9995 90 9132",
-      status: "Inactive",
+      status: "Blocked",
       subscriptionEmail: "info@flynext.com",
     },
     {
@@ -82,7 +82,7 @@ const ManageUser = () => {
             key={user.id}
             className={`border-b border-gray-100 lg:p-5 ${index % 2 === 0 ? "zebra-stripe-even" : "zebra-stripe-odd"}`}
           >
-            <div className="grid grid-cols-4 gap-7">
+            <div className="grid grid-cols-4 gap-7 cursor-pointer">
               <div>
                 <p className="listhead">ID</p>
                 <p className="listdata">{user.id}</p>

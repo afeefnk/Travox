@@ -62,8 +62,3 @@
 .zebra-stripe-odd {
     background-color: #f9f9f9; /* White */
 }
-
-.userslists > div:hover {
-    background-color: #f6f8fb;
-    cursor: pointer;
-}
