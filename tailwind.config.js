@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         switzerM: ['"Switzer Medium"', 'sans-serif'],
         switzerR: ['"Switzer Regular"', 'sans-serif'],
+        switzerSM: ['"Switzer SemiBold"', 'sans-serif'],
       },
     },
   },

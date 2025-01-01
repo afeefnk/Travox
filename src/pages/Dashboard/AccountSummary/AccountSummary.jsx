@@ -10,47 +10,62 @@ import {
   Legend,
   Title,
 } from "chart.js";
-import ChartDataLabels from "chartjs-plugin-datalabels";  // Import the plugin
+import ChartDataLabels from "chartjs-plugin-datalabels"; // Import the plugin
 
-ChartJS.register(ArcElement, Tooltip, Legend, Title, ChartDataLabels);  // Register the plugin
+ChartJS.register(ArcElement, Tooltip, Legend, Title, ChartDataLabels); // Register the plugin
 
 const AccountSummary = () => {
   const data = {
-    labels: ['Service', 'Transport', 'Health', 'Food', 'Shop'],
-    datasets: [{
-      data: [35, 12, 11, 17, 25],
-      backgroundColor: [
-        '#45B020',
-        '#1192EF',
-        '#9614FC',
-        '#D22CD6',
-        '#F5640D'
-      ],
-      hoverOffset: 30,
-    }],
+    labels: ["Service", "Transport", "Health", "Food", "Shop"],
+    datasets: [
+      {
+        data: [35, 12, 11, 17, 25],
+        backgroundColor: ["#45B020", "#1192EF", "#9614FC", "#D22CD6", "#F5640D"],
+        hoverOffset: 30,
+      },
+    ],
   };
 
   const config = {
-    type: 'doughnut',
-    data: data,
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        datalabels: {
-          font: {
-            weight: 'bold',
-            size: 14,
-          },
-          anchor: 'center',  // Position the label in the center of each segment
-          align: 'center',   // Align text in the center
-          padding: 10,       // Add padding around the text
-          display: true,     // Display the data labels
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      datalabels: {
+        font: {
+          family: "Switzer Medium, sans-serif", // Customize font family
+          size: 12,                   // Customize font size
+        },
+        color: "#FFFFFF", // Set data labels color to white
+        anchor: "center",
+        align: "center",
+        padding: 10,
+        display: true,
+        formatter: (value, context) => {
+          const dataset = context.chart.data.datasets[context.datasetIndex];
+          const total = dataset.data.reduce((acc, val) => acc + val, 0);
+          const percentage = ((value / total) * 100).toFixed(0); // Calculate percentage with 1 decimal
+          return `${percentage}%`; // Display as percentage
         },
       },
-      
+      legend: {
+        position: "bottom", // Move legend to the bottom
+        labels: {
+          usePointStyle: true, // Use point-style indicators
+          padding: 58,
+          font: {
+            size: 10, // Custom font size for legend
+            family: "Switzer Regular, sans-serif", // Custom font family for legend
+          },
+          color: "#25282B", // Custom font color for legend
+          boxWidth: 15, // Adjust the width of the point-style indicator
+          padding: 18,
+        },
+      },
     },
   };
+  
+  
+  
   
 
   return (
@@ -74,8 +89,8 @@ const AccountSummary = () => {
       </div>
 
       {/* Container for the chart */}
-      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "280px", cursor: "pointer" }}>
-        <div style={{ width: "280px", height: "280px" }}>
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <div style={{ width: "280px", height: "280px", cursor:"pointer" }}>
           <Doughnut data={data} options={config} />
         </div>
       </div>

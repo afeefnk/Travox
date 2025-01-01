@@ -47,10 +47,10 @@ const Subscriptions = () => {
       {/* Tab Content */}
       {activeTab === "addSubscriptionplan" && (
         <div className="bg-white p-6 w-60 text-center">
-          <div className="mb-5 p-4 border border-[#25282B] rounded-md">
+          <div className="mb-5 p-3 border border-[#25282B] rounded-md">
             <p className="plan">Plan Name: 3 Months</p>
           </div>
-          <div className="mb-5 p-4 border border-[#25282B] rounded-md">
+          <div className="mb-5 p-3 border border-[#25282B] rounded-md">
             <p className="plan">Duration: 90 Days</p>
           </div>
           <button className="w-full bg-[#254396] text-white hover:bg-[#1d3476] transition duration-300 plansbt">

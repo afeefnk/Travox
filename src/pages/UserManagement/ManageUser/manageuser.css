@@ -5,19 +5,30 @@
 }
 
 .manageuserhead {
-    font-family: "Switzer Light";
-    font-weight: 600;
+    font-family: 'Switzer Medium';
     font-size: 24px;
     line-height: 25px;
     color: #25282B;
     padding: 20px;
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Stick to the top of the container */
+    background-color: white; /* Ensure it stays visible over content */
+    z-index: 10;
+}
+
+.dividerbottom {
+    position: sticky;
+    top: 60px;
+    background-color: white; /* Ensure the divider is visible */
+    z-index: 5; /* Place the divider below the header */
+    border-bottom: 1.5px solid #EEEFFF; /* Border style for the divider */
 }
 
 .userslists {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
+    min-height: 444px;
+    overflow-y: auto;
 }
 
 .listhead {
@@ -28,19 +39,31 @@
     color: #ACACAC;
 }
 
-.listdata{
-    font-family: "Switzer Regular";
-    font-weight: 500;
+.listdata {
+    font-family: 'Switzer Medium';
     font-size: 16px;
     line-height: 24px;
     color: #25282B;
 }
 
-.userstatus{
-   padding: 2px 6px;
+.userstatus {
+   padding: 4px 6px;
    border-radius: 4px;
    font-family: "Switzer Light";
    font-weight: 400;
    font-size: 14px;
    line-height: 16px;
+}
+
+.zebra-stripe-even {
+    background-color: #ffffff; /* Light gray */
+}
+
+.zebra-stripe-odd {
+    background-color: #FBFBFB; /* White */
+}
+
+.userslists > div:hover {
+    background-color: #f4f7fb;
+    cursor: pointer;
 }

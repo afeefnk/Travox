@@ -40,8 +40,8 @@ const AdminManagement = () => {
           onClick={() => setIsAddAdmin(true)}
           className={`adminbtns ${
             isAddAdmin
-              ? "text-[#254396] border-b-2 border-b-[#254396] border-t-2 border-t-transparent border-r-transparent border-l-transparent font-semibold"
-              : "text-[#ACACAC] duration-200 border-2 border-transparent"
+              ? "text-[#254396] border-b-2 border-b-[#254396] border-t-2 border-t-transparent border-r-transparent border-l-transparent text-base font-switzerSM"
+              : "text-[#ACACAC] duration-200 border-2 border-transparent text-sm font-switzerR"
           }`}
         >
           <div className="flex items-center justify-center">
@@ -56,8 +56,8 @@ const AdminManagement = () => {
           onClick={() => setIsAddAdmin(false)}
           className={`adminbtns ${
             !isAddAdmin
-              ? "text-[#254396] border-b-2 border-b-[#254396] border-t-2 border-t-transparent border-r-transparent border-l-transparent font-semibold"
-              : "text-[#ACACAC] duration-200 border-2 border-transparent"
+              ? "text-[#254396] border-b-2 border-b-[#254396] border-t-2 border-t-transparent border-r-transparent border-l-transparent text-base font-switzerSM"
+              : "text-[#ACACAC] duration-200 border-2 border-transparent text-sm font-switzerR"
           }`}
         >
           <div className="flex items-center justify-center">
@@ -143,7 +143,7 @@ const AdminManagement = () => {
       ) : (
         <div>
           <div className=" bg-white">
-            <table className="min-w-full  divide-gray-200 text-sm">
+            <table className="min-w-full  divide-[#EEEFFF] text-sm">
               <thead className="manageadminhead">
                 <tr>
                   <th

@@ -17,8 +17,8 @@ const getSalesDataForRange = (range) => {
       ];
     case "30 Days":
       return [
-        [20000, 18000, 16000, 14000, 13000, 11000, 9000, 10000, 8000, 7000, 6000, 5000], // Company A
-        [22000, 21000, 20000, 19000, 18000, 17000, 16000, 15000, 14000, 13000, 12000, 11000], // Company B
+        [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 16000, 17000, 18000, 19000, 20000, 21000, 22000, 23000, 24000, 25000, 26000, 27000, 2800, 2900, 3000],
+        [1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000, 10500, 11000, 11500, 12000, 12500, 13000, 13500, 14540, 1700, 2400, 3200, ], // Company B
       ];
     default:
       return [
@@ -28,11 +28,51 @@ const getSalesDataForRange = (range) => {
   }
 };
 
+// Function to group the 30 days into intervals of 3 days
+const groupDataFor30Days = (data) => {
+  let groupedData = [];
+  for (let i = 0; i < data.length; i += 3) {
+    // Sum every 3 days
+    groupedData.push(data.slice(i, i + 3).reduce((a, b) => a + b, 0));
+  }
+  
+  // If there are remaining days (less than 3), add them as a final group
+  if (data.length % 3 !== 0) {
+    groupedData.push(data.slice(groupedData.length * 3).reduce((a, b) => a + b, 0));
+  }
+
+  return groupedData;
+};
+
+// Generate dynamic labels for x-axis based on selected range
+const getXAxisCategories = (range) => {
+  if (range === "30 Days") {
+    const dayRanges = [];
+    for (let i = 1; i <= 30; i += 3) {
+      const start = i;
+      const end = i + 2 > 30 ? 30 : i + 2; // Handle the case where the last group may have less than 3 days
+      dayRanges.push(`${start}-${end} Days`);
+    }
+    return dayRanges;
+  } else {
+    return [
+      "Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ];
+  }
+};
+
 const TotalSales = ({ companies = ["Company A", "Company B"], ranges = ["1 Year", "6 Months", "30 Days", "15 Days", "7 Days"] }) => {
   const [selectedRange, setSelectedRange] = useState("1 Year");
 
   // Get the dynamic data based on selected range
   const chartData = getSalesDataForRange(selectedRange);
+
+  // For "30 Days", group the data into 3-day intervals
+  if (selectedRange === "30 Days") {
+    chartData[0] = groupDataFor30Days(chartData[0]); // Group Company A data
+    chartData[1] = groupDataFor30Days(chartData[1]); // Group Company B data
+  }
 
   const chartOptions = {
     chart: {
@@ -49,12 +89,11 @@ const TotalSales = ({ companies = ["Company A", "Company B"], ranges = ["1 Year"
       ],
     },
     xaxis: {
-      categories: [
-        "Jan", "Feb", "Mar", "Apr", "May", "Jun", 
-        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-      ],
+      categories: getXAxisCategories(selectedRange), // Use dynamic categories based on selected range
     },
     yaxis: {
+      min: 0, // Set min value to 0k
+      max: 120000, // Set max value to 120k
       labels: {
         formatter: (val) => `$${val / 1000}k`,
         style: { colors: "#7c8db5" },
@@ -81,6 +120,7 @@ const TotalSales = ({ companies = ["Company A", "Company B"], ranges = ["1 Year"
       offsetX: 0,
     },
   };
+  
 
   const chartSeries = companies.map((company, index) => ({
     name: company,
@@ -106,10 +146,10 @@ const TotalSales = ({ companies = ["Company A", "Company B"], ranges = ["1 Year"
         ))}
       </div>
       <div className="innerbox">
-      <h3 className="salesanalytics">Sales Analytics</h3>
-      <div className="overflow-hidden">
-        <Chart options={chartOptions} series={chartSeries} type="bar" height={400} />
-      </div>
+        <h3 className="salesanalytics">Sales Analytics</h3>
+        <div className="overflow-hidden">
+          <Chart options={chartOptions} series={chartSeries} type="bar" height={400} />
+        </div>
       </div>
     </div>
   );

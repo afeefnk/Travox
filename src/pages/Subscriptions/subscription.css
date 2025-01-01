@@ -4,8 +4,7 @@
   }
   
   .subscriptionhead {
-    font-family: "Switzer Light";
-    font-weight: 600;
+    font-family: 'Switzer Medium';
     font-size: 24px;
     line-height: 25px;
     color: #25282b;
@@ -15,9 +14,8 @@
   
   .subscriptiontabs {
     padding: 0.2rem 0rem;
-    font-family: "Switzer Light";
+    font-family: 'Switzer Regular';
     font-size: 14px;
-    font-weight: 400;
     border-bottom: 2px solid transparent;
     color: #acacac;
     cursor: pointer;
@@ -27,7 +25,7 @@
   
   .subscriptiontabs.active {
     color: #254396;
-    font-weight: 600;
+    font-family: 'Switzer SemiBold';
     border-bottom: 2px solid #254396;
   }
   
