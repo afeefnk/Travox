@@ -19,8 +19,7 @@
 }
 
 .values {
-    font-family: "Switzer Regular";
-    font-weight: 600;
+    font-family: 'Switzer SemiBold';    
     font-size: 24px;
     line-height: 31.68px;
     color: #25282B;
@@ -30,8 +29,7 @@
 
 
 .labels {
-    font-family: "Switzer Light";
-    font-weight: 400;
+    font-family: 'Switzer Regular';
     font-size: 14px;
     line-height: 18.48px;
     color: #ACACAC;

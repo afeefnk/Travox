@@ -12,8 +12,7 @@
 }
 
 .totalsaleshead {
-  font-family: "Switzer Light";
-  font-weight: 600;
+  font-family: 'Switzer Medium';
   font-size: 24px;
   line-height: 31.68px;
   color: #25282B;
@@ -22,14 +21,13 @@
 }
 
 .yearcategory {
-  font-family: "Switzer Regular";
-  font-weight: 500;
   font-size: 16px;
   line-height: 21.12px;
 }
 
 .yearcategory{
   margin: 0px 70px 0px 20px;
+  padding-bottom: 5px;
 }
 
 .border-btm {
@@ -43,7 +41,6 @@
 .salesanalytics{
   padding: 30px 0px 0px 20px;
   font-family: "Switzer Regular";
-  font-weight: 400;
   font-size: 16px;
   line-height: 21.12px;
   color: #25282B;

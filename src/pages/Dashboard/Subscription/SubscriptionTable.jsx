@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./subcription.css";
-
+import leftarrow from "../../../assets/images/Cards/leftArrow.svg";
+import rightarrow from "../../../assets/images/Cards/rightArrow.svg";
 const SubscriptionTable = () => {
   const [activeTab, setActiveTab] = useState("Expiry In 30 Days");
 
@@ -124,7 +125,7 @@ const SubscriptionTable = () => {
 
   // Pagination state and logic
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10; // Change as necessary
+  const itemsPerPage = 5; // Change as necessary
   const filteredCompanies = getFilteredData();
 
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -198,54 +199,75 @@ const SubscriptionTable = () => {
         </div>
 
       </div>
-        <div className="flex justify-between items-center pagination">
-          <p className="paginationtext">
-            Showing{" "}
-            <span className="text-[#25282B]">
-              {itemsPerPage * (currentPage - 1) + 1} to{" "}
-              {Math.min(currentPage * itemsPerPage, filteredCompanies.length)}{" "}
-              of {filteredCompanies.length}
-            </span>{" "}
-            entries
-          </p>
-          <div className="flex">
-            <button
-              onClick={() => handlePageChange(currentPage - 1)}
-              disabled={currentPage === 1}
-              className={`px-0 py-2 ${
-                currentPage === 1
-                  ? "text-gray-300 cursor-not-allowed font-extrabold"
-                  : "text-[#25282B] font-extrabold"
-              }`}
-            >
-              &lt;
-            </button>
-            {Array.from({ length: totalPages }).map((_, i) => (
-              <button
-                key={i}
-                onClick={() => handlePageChange(i + 1)}
-                className={`px-1 py-2 ${
-                  currentPage === i + 1
-                    ? "border-[#25282B] text-[#25282B] underline swipepage"
-                    : "border-gray-300 text-[#ACACAC] swipepage"
-                }`}
-              >
-                {i + 1}
-              </button>
-            ))}
-            <button
-              onClick={() => handlePageChange(currentPage + 1)}
-              disabled={currentPage === totalPages}
-              className={`px-0 py-2 ${
-                currentPage === totalPages
-                  ? "text-gray-300 cursor-not-allowed font-extrabold"
-                  : "text-[#25282B] font-extrabold rounded-lg"
-              }`}
-            >
-              &gt;
-            </button>
-          </div>
-        </div>
+      <div className="flex justify-between items-center pagination">
+  <p className="paginationtext">
+    Showing{" "}
+    <span className="text-[#25282B]">
+      {itemsPerPage * (currentPage - 1) + 1} to{" "}
+      {Math.min(currentPage * itemsPerPage, filteredCompanies.length)}{" "}
+      of {filteredCompanies.length}
+    </span>{" "}
+    entries
+  </p>
+  <div className="flex">
+  <button
+  onClick={() => handlePageChange(currentPage - 1)}
+  disabled={currentPage === 1}
+  className={`px-2 py-2 flex items-center ${
+    currentPage === 1
+      ? "text-gray-300 cursor-not-allowed font-extrabold"
+      : "text-[#25282B] font-extrabold"
+  }`}
+>
+  <img
+    src={leftarrow}
+    alt="Previous"
+    className={`w-4 h-4 ${
+      currentPage === 1 ? "grayscale opacity-10" : ""
+    }`}
+    style={{
+      filter: currentPage === 1 ? "grayscale(100%)" : "none",
+    }}
+  />
+</button>
+
+    {Array.from({ length: totalPages }).map((_, i) => (
+      <button
+        key={i}
+        onClick={() => handlePageChange(i + 1)}
+        className={`px-1 py-2 ${
+          currentPage === i + 1
+            ? "border-[#25282B] text-[#25282B] underline swipepage"
+            : "border-gray-300 text-[#ACACAC] swipepage"
+        }`}
+      >
+        {i + 1}
+      </button>
+    ))}
+    <button
+      onClick={() => handlePageChange(currentPage + 1)}
+      disabled={currentPage === totalPages}
+      className={`px-2 py-2 flex items-center ${
+        currentPage === totalPages
+          ? "text-gray-100 cursor-not-allowed font-extrabold"
+          : "text-[#25282B] font-extrabold"
+      }`}
+    >
+      <img
+        src={rightarrow}
+        alt="Next"
+        className={`w-4 h-4 ${
+          currentPage === totalPages ? "grayscale opacity-10" : ""
+        }`}
+        style={{
+          filter: currentPage === totalPages ? "grayscale(100%)" : "none",
+        }}
+      />
+    </button>
+  </div>
+</div>
+
+
     </div>
   );
 };

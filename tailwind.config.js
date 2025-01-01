@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        switzerM: ['"Switzer Medium"', 'sans-serif'],
+        switzerR: ['"Switzer Regular"', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 };

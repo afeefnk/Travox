@@ -57,8 +57,10 @@ const Sidebar = () => {
   return (
     <>
       <div className=" flex flex-col">
+        <div className="logoclass">
         <img src={logo} alt="Travox Logo" className="logo" />
-        <div className="divider"></div>
+        </div>
+        {/* <div className="divider"></div> */}
 
         <div className="sidebar-content flex-grow overflow-y-auto mainsidebar bg-white">
           <nav className="flex flex-col items-center relative sidebartab">
@@ -245,11 +247,13 @@ const Sidebar = () => {
           </nav>
         </div>
 
-        <div className="divider2"></div>
+        {/* <div className="divider2"></div> */}
+        <div className="footerclass">
         <p className="footertext">
           Powered By <br />
           Hoztox Technologies
         </p>
+        </div>
       </div>
     </>
   );

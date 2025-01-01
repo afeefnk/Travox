@@ -7,12 +7,10 @@
     border: 1px solid #eeefff;
     border-radius: 15px;
     overflow-x: hidden;
-    /* width: 68%; */
   }
   
   .subscription {
-    font-family: "Switzer Light";
-    font-weight: 600;
+    font-family: 'Switzer Medium';
     font-size: 24px;
     line-height: 31.68px;
     color: #25282b;
@@ -20,8 +18,7 @@
   }
   
   .expirydays {
-    font-family: "Switzer Regular";
-    font-weight: 500;
+    font-family: 'Switzer Medium';
     font-size: 16px;
     line-height: 21.12px;
     padding-bottom: 5px;
@@ -34,7 +31,7 @@
   .companynamehead {
     text-align: left;
     font-family: "Switzer Regular";
-    font-weight: 500;
+    font-weight: 400;
     font-size: 12px;
     color: #acacac;
     padding: 5px 0px 10px 15px;
@@ -43,7 +40,7 @@
   .expirydatehead {
     text-align: right;
     font-family: "Switzer Regular";
-    font-weight: 500;
+    font-weight: 400;
     font-size: 12px;
     color: #acacac;
     padding: 5px 15px 10px 0px;
@@ -57,8 +54,8 @@
   
   .tablecmpyname {
     margin-left: 15px;
-    font-family: "Switzer Light";
-    font-weight: 500;
+    font-family: 'Switzer Regular';
+    color: #25282B;
     font-size: 14px;
     line-height: 18.48px;
   }
@@ -69,8 +66,7 @@
   }
   
   .tabledates {
-    font-family: "Switzer Light";
-    font-weight: 400;
+    font-family: 'Switzer Regular';
     font-size: 14px;
     line-height: 18.48px;
     color: #FA461D;
@@ -79,8 +75,7 @@
 
   
   .paginationtext {
-    font-family: "Switzer Light";
-    font-weight: 400;
+    font-family: 'Switzer Regular';
     font-size: 14px;
     line-height: 18.48px;
     color: #ACACAC;
@@ -92,8 +87,7 @@
   }
   
   .swipepage {
-    font-family: "Switzer Regular";
-    font-weight: 500;
+    font-family: 'Switzer Medium';
   }
   
   .tablecontainer .overflow-x-auto {
@@ -134,4 +128,93 @@
   scrollbar-color: #dcdcdc #f0f0f0;
 }
 
+
+@media (min-width:1584px) {
+  .subscriptionmain {
+    width: 73.1%;
+  }
+}
+
+@media (min-width:1606px) { 
+  .subscriptionmain {
+    width: 72.9%;
+  }
+}
+
+@media (min-width:1645px) {
+  .subscriptionmain {
+    width: 72.7%;
+  }
+ }
+
+ @media (min-width:1659px) {
+  .subscriptionmain {
+    width: 72.5%;
+  }
+ }
+
+ @media (min-width:1699px) {
+  .subscriptionmain {
+    width: 72.1%;
+  }
+ }
+
+ @media (min-width:1835px) {
+  .subscriptionmain {
+    width: 71.7%;
+  }
+ }
+
+ @media (min-width:1920px) {
+  .subscriptionmain {
+    width: 71.4%;
+  }
+ }
+
+ @media (min-width:1960px) { 
+  .subscriptionmain {
+    width: 71.2%;
+  }
+ }
+
+ @media (min-width:2000px) { 
+  .subscriptionmain {
+    width: 71.1%;
+  }
+ }
+
+ @media (min-width:2030px) {
+  .subscriptionmain {
+    width: 70.9%;
+  }
+  }
+
+  @media (min-width:2150px) {
+    .subscriptionmain {
+      width: 70.7%;
+    }
+  }
+
+  @media (min-width:2180px) {
+    .subscriptionmain {
+      width: 70.55%;
+    }
+  }
   
+  @media (min-width:2245px) {
+    .subscriptionmain {
+      width: 70.4%;
+    }
+  }
+
+  @media (min-width:2280px) { 
+    .subscriptionmain {
+      width: 70.2%;
+    }
+  }
+
+  @media (min-width:2300px) { 
+    .subscriptionmain {
+      width: 70.1%;
+    }
+  }

@@ -1,54 +1,38 @@
 .mainsidebar {
-  width: 256px;
+  width: 257px;
   height: 100vh; /* Ensure the sidebar fills the height */
   overflow-y: auto; /* Enable scrolling */
   position: relative; /* To position the logo and divider correctly */
 }
 
 .sidebar-content {
-  margin-top: 100px; /* Add space for the fixed logo and divider */
+  margin-top: 5px; /* Add space for the fixed logo and divider */
   padding-bottom: 20px; /* Ensure the content doesn't touch the bottom */
   height: 100%; /* Full height for the scrollable area */
 }
 
 .logo {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  width: 116px;
-  height: 40px;
-  margin-top: 0; /* Remove any margin */
+  width: 117px;
+  height: auto;
+  margin-top: 20px;
   z-index: 10;
+  padding-bottom: 30px;
 }
 
-.divider {
-  position: fixed;
-  top: 70px; /* Space for logo */
-  left: 20px;
-  width: 200px;
-  margin-top: 25px;
-  height: 0.5px;
-  background-color: #e9e9e9;
-  z-index: 10; /* Make sure the divider stays on top */
-}
-
-.divider2 {
-  width: 80%;
-  height: 0.5px;
-  background-color: #e9e9e9;
-  margin-top: 10px;
-  margin-bottom: 30px;
+.logoclass {
+  border-bottom: 1px solid #E9E9E9;
   margin-left: 20px;
+  margin-right: 20px;
 }
 
 .sidebartab {
   margin: 25px 0px 0px 0px;
-  gap: 10px 0px;
+  gap: 11px;
 }
 
 .sideicon {
-  width: 16.5px;
-  height: 16.5px;
+  width: 16.67px;
+  height: 16.67px;
 }
 
 .dashboardimg {
@@ -57,11 +41,10 @@
 }
 
 .spans {
-  font-family: "Switzer Light";
-  font-weight: 500;
-  font-size: 14px;
+  font-family: 'Switzer Light';
+  font-size: 16px;
   line-height: 21.12px;
-  color: #acacac;
+  color: #ACACAC;
 }
 
 .menu {
@@ -95,15 +78,14 @@
 
 .activestate.active .spans {
   color: #254396;
-  font-family: "Switzer Light";
-  font-weight: 600;
+  font-family: 'Switzer Medium';
 }
 
 .activestate.active {
   background-color: #eff6fe;
   border-radius: 0px 8px 8px 0px;
-  padding: 10px 0px;
-  width: 210px;
+  height: 44px;
+  width: 240px;
 }
 
 /* Dropdown menu */
@@ -127,9 +109,8 @@
 }
 
 .dropdown-item {
-  font-family: "Switzer Light";
-  font-weight: 400;
-  font-size: 13px;
+  font-family: 'Switzer Regular';
+  font-size: 16px;
   padding: 8px 0;
   cursor: pointer;
   color: #acacac;
@@ -153,9 +134,10 @@
 
 /* Active state for dropdown items */
 .dropdown-item.active {
-  color: #254396; /* Match the active color */
-  font-weight: 600;
+  font-family: 'Switzer Medium';
+  color: #254396;
 }
+
 
 .dropdown-icon {
   transition: transform 0.3s ease;
@@ -166,12 +148,16 @@
 }
 
 .footertext {
-  font-family: "Switzer Light";
-  font-weight: 400;
+  font-family: 'Switzer Light';
   font-size: 12px;
   line-height: 15.84px;
   color: #959595;
+  border-top: 1px solid #E9E9E9;
   margin-left: 20px;
-  margin-top: 15px;
+  padding-top: 40px;
   margin-bottom: 5px;
+}
+
+.footerclass {
+  margin-right: 20px;
 }

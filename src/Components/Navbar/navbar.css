@@ -8,14 +8,12 @@
 
 .span1 {
   font-family: "Switzer Regular";
-  font-weight: 500;
   font-size: 28px;
   line-height: 36.96px;
 }
 
 .span2 {
-  font-family: "Switzer Regular";
-  font-weight: 600;
+  font-family: 'Switzer SemiBold';
   font-size: 28px;
   line-height: 36.96px;
   color: #25282b;
@@ -23,9 +21,9 @@
 
 .span3 {
   font-family: "Switzer Light";
-  font-weight: 400;
   font-size: 14px;
   line-height: 18.48px;
+  margin-top: 3px;
 }
 
 .search {
@@ -37,8 +35,7 @@
 }
 
 .search::placeholder {
-  font-family: "Switzer Light";
-  font-weight: 400;
+  font-family: "Switzer Regular";
   font-size: 14px;
   line-height: 18.48px;
   color: #acacac;

@@ -97,8 +97,8 @@ const TotalSales = ({ companies = ["Company A", "Company B"], ranges = ["1 Year"
             onClick={() => setSelectedRange(range)}
             className={`yearcategory ${
               selectedRange === range
-                ? "text-[#254396] border-btm border-t-2 border-t-transparent border-[#254396]"
-                : "text-[#ACACAC] hover:text-[#7b7b7b]"
+                ? "text-[#254396] border-btm border-t-2 border-t-transparent border-[#254396] font-switzerM"
+                : "text-[#ACACAC] hover:text-[#7b7b7b] font-switzerR"
             }`}
           >
             Last {range}

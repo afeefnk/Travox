@@ -3,19 +3,18 @@
     border-radius: 15px;
     background-color: #FBFBFB;
     margin: 30px 30px 0px 0px;
-    height: 639.2px;
+    height: 478.8px;
     overflow: auto;
     width: 44%;
 }
 
 .accountsummary{
-    font-family: "Switzer Light";
-    font-weight: 600;
+    font-family: 'Switzer Medium';
     font-size: 24px;
     line-height: 31.68px;
     color: #25282B;
     text-align: start;
-    padding: 20px 0px 15px 15px;
+    padding: 20px 0px 20px 20px;
 }
 
 .incomebox {
@@ -31,12 +30,11 @@
   }
 
   .reports {
-    margin: 10px 15px 50px 15px;
+    margin: 10px 20px 20px 20px;
   }
 
   .reporttext {
-    font-family: "Switzer Light";
-    font-weight: 400;
+    font-family: 'Switzer Regular';
     font-size: 14px;
     line-height: 18.48px;
     color: #ACACAC;
@@ -44,12 +42,16 @@
 
   .amount {
     font-family: 'Switzer Bold';
-    font-weight: 700;
     font-size: 20px;
     line-height: 26.4px;
-    color: #25282B;
+    color:#25282B;
     margin-top: 5px;
   }
+
+
+
+  
+  
 
 
 
