@@ -1,47 +1,30 @@
-.sales {
-  border: 1px solid #EEEFFF;
+.salestab {
+  margin: 30px;
   border-radius: 15px;
-  margin: 25px 30px 15px 30px;
-  
-}
-
-.innerbox {
-  border: 1px solid #EEEFFF;
-  border-radius: 8px;
-  background-color: white;
 }
 
 .totalsaleshead {
+  padding: 20px 0px 25px 15px;
   font-family: 'Switzer Medium';
   font-size: 24px;
   line-height: 31.68px;
   color: #25282B;
-  margin-bottom: 10px;
-  padding: 20px;
 }
 
-.yearcategory {
-  font-size: 16px;
-  line-height: 21.12px;
+.yeartabs {
+  padding-left: 15px;
 }
 
-.yearcategory{
-  margin: 0px 70px 0px 20px;
-  padding-bottom: 5px;
+.saleschart {
+  margin: 20px 15px 20px 15px;
+  border-radius: 8px;
+  padding: 15px;
 }
 
-.border-btm {
-  border-bottom-width: 3px;
-}
-
-.innerbox {
-  margin: 20px;
-}
-
-.salesanalytics{
-  padding: 30px 0px 0px 20px;
-  font-family: "Switzer Regular";
+.salesanalytics {
+  font-family: 'Switzer Regular';
   font-size: 16px;
   line-height: 21.12px;
   color: #25282B;
+  padding: 15px 0px 25px 0px;
 }

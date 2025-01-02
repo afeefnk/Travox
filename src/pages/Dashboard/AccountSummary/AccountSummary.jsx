@@ -20,7 +20,7 @@ const AccountSummary = () => {
     datasets: [
       {
         data: [25, 12, 11, 17, 15, 20],
-        backgroundColor: ["#45B020", "#1192EF", "#9614FC", "#D22CD6", "#F5640D", "#FFFF00"],
+        backgroundColor: ["#45B020", "#1192EF", "#9614FC", "#D22CD6", "#F5640D", "#821d30"],
         hoverOffset: 30,
       },
     ],
